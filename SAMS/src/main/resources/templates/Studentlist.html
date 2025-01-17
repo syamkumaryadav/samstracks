@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+    <h1>Entity List</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Grade</th>
+                <th>Type</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through the entities using Thymeleaf -->
+            <tr th:each="entity : ${allStudents}">
+                <td th:text="${entity.id}"></td>
+                <td th:text="${entity.name}"></td>
+                <td th:text="${entity.grade}"></td>
+                <td th:text="${entity.type}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
