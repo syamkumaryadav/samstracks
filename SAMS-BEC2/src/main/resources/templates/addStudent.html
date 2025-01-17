@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Student Achievements Form</title>
+<link th:href="@{/css/bootstrap.min.css}" rel="stylesheet">
+<style type="text/css">
+body {
+	display: grid;
+}
+</style>
+
+</head>
+<body>
+	<div>
+		<h5 class="mb-0 text-center text-black"
+			style="font-family: magneto; font-size: 45px; background-color: yellow;">
+			Student Achievements Form</h5>
+		<!-- <div>
+			<a href="/getStudents">View Students</a>
+		</div> -->
+		<div>
+
+			<form th:action="@{/submit}" th:object="${ref}" th:method="post"
+				style="max-width: 500px; margin: 0 auto;">
+				<div class="form-group">
+					<label style="font-weight: bold;">Name</label> <input type="text"
+						class="form-control" th:field="*{name}" placeholder="Enter Name"
+						style="margin-bottom: 10px;">
+				</div>
+				<div class="form-group">
+					<label style="font-weight: bold;">Regd.No</label> <input
+						type="text" class="form-control" th:field="*{registrationNo}"
+						placeholder="Enter Registration Number"
+						style="margin-bottom: 10px;">
+				</div>
+				<div class="form-group">
+					<label style="font-weight: bold;">Branch</label> <select
+						class="form-control" th:field="*{branch}"
+						style="margin-bottom: 10px;">
+						<option value="">-- Select Branch --</option>
+						<option value="AIML">AIML</option>
+						<option value="CB&DS">CB&DS</option>
+						<option value="CSE">CSE</option>
+						<option value="CIVIL">CIVIL</option>
+						<option value="ECE">ECE</option>
+						<option value="EEE">EEE</option>
+						<option value="EIE">EIE</option>
+						<option value="IT">IT</option>
+						<option value="MECH">MECH</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label style="font-weight: bold;">Type of Achievement</label> <select
+						class="form-control" th:field="*{achievementType}"
+						style="margin-bottom: 10px;">
+						<option value="">-- Select Achievement Type --</option>
+						<option value="Sports">Sports</option>
+						<option value="Technical">Technical</option>
+						<option value="Cultural">Cultural</option>
+						<option value="Academics">Academics</option>
+						<option value="Certifications">Certifications</option>
+						<option value="NSS">NSS</option>
+						<option value="NCC">NCC</option>
+						<option value="Literary">Literary</option>
+						<option value="Other">Other</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label style="font-weight: bold;">Achievements</label>
+					<textarea class="form-control" th:field="*{achievementDetails}"
+						placeholder="Describe Achievements (e.g., Kabaddi in Sports, Technical Quiz in Technical, etc.)"
+						rows="4" style="margin-bottom: 10px;"></textarea>
+				</div>
+				<div class="form-group">
+					<label style="font-weight: bold;">Prize</label> <select
+						class="form-control" th:field="*{prize}"
+						style="margin-bottom: 10px;">
+						<option value="">-- Select Prize --</option>
+						<option value="FIRST">FIRST</option>
+						<option value="SECOND">SECOND</option>
+						<option value="THIRD">THIRD</option>
+						<option value="FOURTH">FOURTH</option>
+						<option value="FIFTH">FIFTH</option>
+						<option value="Certification">Certification</option>
+						<option value="Other">Other</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label style="font-weight: bold;">Event</label> <input type="text"
+						class="form-control" th:field="*{event}"
+						placeholder="Enter Event (e.g., Conducted by VIGNANS UNIVERSITY)"
+						style="margin-bottom: 10px;">
+				</div>
+				<div class="form-group">
+					<label style="font-weight: bold;">Academic Year</label> <select
+						class="form-control" th:field="*{academicYear}"
+						style="margin-bottom: 10px;">
+						<option value="">-- Select Academic Year --</option>
+						<option value="2021-22">2021-22</option>
+						<option value="2022-23">2022-23</option>
+						<option value="2023-24">2023-24</option>
+					</select>
+				</div>
+				<div class="form-group">
+					<label style="font-weight: bold;">Achievement Date</label> <input
+						type="date" class="form-control" th:field="*{achievementDate}"
+						style="margin-bottom: 10px;">
+				</div>
+				<input type="submit" class="btn btn-primary" value="Submit">
+			</form>
+		</div>
+	</div>
+	<link
+		href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+		rel="stylesheet"
+		integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+		crossorigin="anonymous">
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+		crossorigin="anonymous"></script>
+	<link rel="stylesheet"
+		href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+</body>
+</html>
+
