@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Student Achievement Form</title>
+</head>
+<body>
+	<form th:action="@{/submit}" th:object="${ref}" th:method="POST">
+		<table>
+			<tr>
+				<td>Name :</td>
+				<td><input type="text" th:field="*{name}"></td>
+			</tr>
+			<tr>
+				<td>Registration No :</td>
+				<td><input type="text" th:field="*{regNo}"></td>
+			</tr>
+			<tr>
+				<td>Branch :</td>
+				<td><input type="text" th:field="*{branch}"></td>
+			</tr>
+			<tr>
+				<td>Registration No :</td>
+				<td><input type="text" th:field="*{registrationNo}"></td>
+			</tr>
+			<tr>
+				<td>Achievement Type :</td>
+				<td><input type="text" th:field="*{achievementType}"></td>
+			</tr>
+			<tr>
+				<td>AchievementDetails :</td>
+				<td><input type="text" th:field="*{achievementDetails}"></td>
+			</tr>
+			<tr>
+				<td>Prize :</td>
+				<td><input type="text" th:field="*{prize}"></td>
+			</tr>
+			<tr>
+				<td>Event :</td>
+				<td><input type="text" th:field="*{event}"></td>
+			</tr>
+			<tr>
+				<td>Academic Year :</td>
+				<td><input type="text" th:field="*{academicYear}"></td>
+			</tr>
+			<tr>
+				<td>Achievement Date :</td>
+				<td><input type="date" th:field="*{achievementDate}"></td>
+			</tr>
+			<tr>
+				<td>image :</td>
+				<td><input type="file" th:field="*{imagePath}"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" value="save" /></td>
+			</tr>
+		</table>
+	
+	</form>
+</body>
+</html>

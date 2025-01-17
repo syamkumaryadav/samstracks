@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Achievements</title>
+</head>
+<body>
+    <h1>Achievements</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Registration No</th>
+                <th>Branch</th>
+                <th>Achievement Type</th>
+                <th>Achievement Details</th>
+                <th>Prize</th>
+                <th>event</th>
+                <th>Academic Year</th>
+                <th>image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Loop through the entities using Thymeleaf -->
+            <tr th:each="entity : ${allStudents}">
+                <td th:text="${entity.name}"></td>
+                <td th:text="${entity.regNo}"></td>
+                <td th:text="${entity.branch}"></td>
+                <td th:text="${entity.achievementType}"></td>
+                <td th:text="${entity.achievementDetails}"></td>
+                <td th:text="${entity.prize}"></td>
+                <td th:text="${entity.event}"></td>
+                <td th:text="${entity.academicYear}"></td>
+                <td th:text="${entity.achievementDate}"></td>
+                <td th:text="${entity.imagePath}"></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
